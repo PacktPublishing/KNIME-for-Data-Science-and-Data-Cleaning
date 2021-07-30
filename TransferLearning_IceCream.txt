@@ -1,0 +1,15 @@
+from pandas import DataFrame
+import tensorflow as tf
+import numpy as np
+
+model = tf.keras.applications.ResNet50(weights='imagenet')
+sample_image = tf.keras.preprocessing.image.load_img(r'C:\Users\danie\Desktop\Knime Dataprep\animage.jpg', target_size=(224,224))
+sample_image = tf.keras.preprocessing.image.img_to_array(sample_image)
+sample_image = np.expand_dims(sample_image,axis=0)
+sample_image =  tf.keras.applications.resnet50.preprocess_input(sample_image)
+
+predictions = model.predict(sample_image)
+preds = tf.keras.applications.resnet50.decode_predictions(predictions, top=5)[0]
+
+
+output_table = DataFrame({"preds":[i[1] for i in preds], "proba":[i[2] for i in preds]})

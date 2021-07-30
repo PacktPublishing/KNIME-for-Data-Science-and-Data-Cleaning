@@ -1,0 +1,36 @@
+{
+  "country_files" : [ {
+    "file_name" : "Country_US",
+    "schema" : [ {
+      "field_name" : "LosAngeles",
+      "data_type" : "VARCHAR",
+      "metatype" : "categorical"
+    }, {
+      "field_name" : "NewYork",
+      "data_type" : "VARCHAR",
+      "metatype" : "categorical"
+    } ]
+  }, {
+    "file_name" : "Country_India",
+    "schema" : [ {
+      "field_name" : "Bangalore",
+      "data_type" : "VARCHAR",
+      "metatype" : "categorical"
+    }, {
+      "field_name" : "Chennai",
+      "data_type" : "VARCHAR",
+      "metatype" : "categorical"
+    }, {
+      "field_name" : "Mumbai",
+      "data_type" : "VARCHAR",
+      "metatype" : "categorical"
+    } ]
+  }, {
+    "file_name" : "Country_Italy",
+    "schema" : [ {
+      "field_name" : "Rome",
+      "data_type" : "VARCHAR",
+      "metatype" : "categorical"
+    } ]
+  } ]
+}
